@@ -1,1 +1,33 @@
 /* below the fold CSS goes here */
+@font-face {
+  font-family: 'Nimbus Sans Novus';
+  src: url('./fonts/NimbusSansNovusRegular.woff2') format('woff2'), url('./fonts/NimbusSansNovusRegular.woff2') format('woff');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nimbus Sans Novus';
+  src: url('./fonts/NimbusSansNovusItalic.woff2') format('woff2'), url('./fonts/NimbusSansNovusItalic.woff') format('woff');;
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nimbus Sans Novus';
+  src: url('./fonts/NimbusSansNovusBold.woff2') format('woff2'), url('./fonts/NimbusSansNovusBold.woff') format('woff');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Nimbus Sans Novus';
+  src: url('./fonts/NimbusSansNovusBoldItalic.woff2') format('woff2'), url('./fonts/NimbusSansNovusBoldItalic.woff') format('woff');;
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
