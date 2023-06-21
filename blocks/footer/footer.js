@@ -13,13 +13,41 @@ export default async function decorate(block) {
   const resp = await fetch(`${footerPath}.plain.html`, window.location.pathname.endsWith('/footer') ? { cache: 'reload' } : {});
 
   if (resp.ok) {
-    const html = await resp.text();
+    const html = document.createElement('div');
+    html.innerHTML = await resp.text();
 
-    // decorate footer DOM
-    const footer = document.createElement('div');
-    footer.innerHTML = html;
+    // create footer container
+    const footerWrapper = document.createElement('div');
+    footerWrapper.classList.add('footer-content-wrapper');
 
-    decorateIcons(footer);
-    block.append(footer);
+    // first div is the icon
+    const iconDiv = html.querySelector('div > div');
+    iconDiv.classList.add('footer-icon');
+    footerWrapper.append(iconDiv);
+
+    // disclaimer container
+    const disclaimerWrapper = document.createElement('div');
+    disclaimerWrapper.classList.add('footer-disclaimer-wrapper');
+
+    // last div is the disclaimer
+    const disclaimerDiv = html.querySelector('div > div:last-child');
+    disclaimerDiv.classList.add('footer-disclaimer-content');
+    disclaimerWrapper.append(disclaimerDiv);
+
+    // footer main content
+    const footerMain = document.createElement('div');
+    footerMain.classList.add('footer-main-content');
+    footerWrapper.append(footerMain);
+
+    // content divs
+    const footerDataSections = html.querySelectorAll('div > div');
+    footerDataSections.forEach((section) => {
+      footerMain.append(section);
+    });
+
+    decorateIcons(footerWrapper);
+
+    block.append(footerWrapper);
+    block.append(disclaimerWrapper);
   }
 }
