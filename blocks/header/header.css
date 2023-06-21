@@ -99,6 +99,11 @@
   white-space: nowrap;
 }
 
+.header.block .nav-sections a:hover {
+  background-color: var(--sea-blue);
+  color: white;
+}
+
 @media screen and (min-width: 600px) {
   header {
     position: sticky;
