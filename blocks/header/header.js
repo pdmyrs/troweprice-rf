@@ -42,8 +42,8 @@ function buildBrand() {
   const brand = document.createElement('div');
   brand.classList.add('nav-brand');
   brand.innerHTML = `
-    <img class="logo" src="./styles/images/bright-blue-logo.png" alt="T. Rowe Price Trusty logo">
-    <img class="wordmark" src="./styles/images/wordmark-gray.png" alt="T. Rowe Price">
+    <img class="logo" src="/styles/images/bright-blue-logo.png" alt="T. Rowe Price Trusty logo">
+    <img class="wordmark" src="/styles/images/wordmark-gray.png" alt="T. Rowe Price">
   `;
   return brand;
 }
