@@ -1,39 +1,116 @@
 /* block specific CSS goes here */
 
-main .hero-container > div {
+main .section.hero-container {
   max-width: unset;
 }
-  
-main .hero-container {
-  padding: 0;
-}
-  
-main .hero {
+
+.block.hero {
   position: relative;
-  padding: 32px;
-  min-height: 300px;
 }
 
-main .hero h1 {
-  max-width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  color: white;
+.block.hero .image-wrapper picture {
+  position: relative;
+  display: block;
+  height: 240px;
 }
 
-main .hero picture {
+.block.hero .image-wrapper picture img {
   position: absolute;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
-  box-sizing: border-box;
+  object-position: center;
+  z-index: -1;
 }
 
-main .hero img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
+.block.hero .content-wrapper {
+  position: relative;
+}
+
+.block.hero .content {
+  display: flex;
+  padding: 36px 24px;
+  flex-direction: column;
+}
+
+.block.hero .content .pre p {
+  font-size: var(--body-font-size-xs);
+  font-weight: var(--font-weight-bold);
+  line-height: var(--line-height-m);
+  letter-spacing: var(--letter-spacing-xs);
+  text-transform: uppercase;
+  color: var(--charcoal);
+}
+
+.block.hero .content .title {
+  margin: 16px 0;
+}
+
+.block.hero .content .title p {
+  font-family: var(--heading-font-family);
+  font-weight: var(--font-weight-bold);
+  font-size: var(--heading-font-size-l);
+  letter-spacing: var(--letter-spacing-xs);
+  line-height: var(--line-height-xs);
+  color: var(--charcoal);
+}
+
+.block.hero .content .subtitle p {
+  line-height: var(--line-height-m);
+  letter-spacing: var(--letter-spacing-xs);
+  color: var(--charcoal);
+}
+
+@media screen and (min-width: 600px) {
+  .block.hero .content .pre p {
+    font-size: var(--body-font-size-s);
+  }
+
+  .block.hero .content .title p {
+    font-size: var(--heading-font-size-xl);
+    letter-spacing: var(--letter-spacing-xs);
+    line-height: var(--line-height-xs);
+    color: var(--charcoal);
+  }
+
+  .block.hero .content .subtitle p {
+    font-size: var(--body-font-size-l);
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .block.hero .image-wrapper picture {
+    height: 538px;
+  }
+
+  .block.hero .content-wrapper .content {
+    position: absolute;
+    left: 56px;
+    bottom: -40px;
+    width: 420px;
+    padding: 62px 40px;
+    border-radius: 4px;
+    background-color: white;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .block.hero .content-wrapper {
+    max-width: var(--wide-page-width);
+    margin: 0 auto;
+  }
+
+  .block.hero .content-wrapper .content {
+    left: 88px;
+    width: 486px;
+  }
+
+  .block.hero .content .title p {
+    font-size: var(--heading-font-size-xxl);
+  }
+
+  .block.hero .content .subtitle p {
+    font-size: var(--body-font-size-xl);
+  }
 }
