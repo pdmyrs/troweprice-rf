@@ -1,14 +1,140 @@
 footer {
-  padding: 2rem;
   background-color: var(--overlay-background-color);
-  font-size: var(--body-font-size-s);
+  font-family: var(--body-font-family);
+  font-size: var(--body-font-size-m);
+}
+
+@media screen and (min-width: 1200px) {
+  footer {
+    background-color: var(--overlay-background-color);
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size-l);
+  }
+}
+
+footer.block {
+  padding: 0;
+  margin: 0;
 }
 
 footer .footer {
-  max-width: 1200px;
-  margin: auto;
+  margin: 0;
 }
 
 footer .footer p {
   margin: 0;
+  color: #fff;
+}
+
+footer .block h1 {
+  color: #d3d7da;
+  font-weight: var(--font-weight-bold);
+  margin-bottom: 1pc;
+}
+
+footer .footer-content-wrapper {
+  padding-top: 4pc;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #3b4b59;
+}  
+
+footer .footer-icon {
+  margin: 0 auto;
+  max-width: var(--wide-page-width);
+  border-bottom: 1px solid #66737e;
+  padding-bottom: 24px;
+  overflow: hidden;
+}
+
+footer .footer-icon > picture {
+  max-width: 100%;
+}
+
+footer .footer-icon > picture > img {
+  max-width: 100%;
+}
+
+
+footer .footer-main-content {
+  margin: 0 auto;
+  max-width: var(--wide-page-width);
+  display: flex;
+  line-height: 24px;
+  padding-top: 24px;
+  padding-bottom: 3pc;
+  gap: 20px 2pc;
+  flex-flow: column wrap;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+@media screen and (min-width: 600px) {
+  footer .footer-main-content {
+    margin: 0 auto;
+    max-width: var(--wide-page-width);
+    display: flex;
+    flex-flow: row wrap;
+    line-height: 24px;
+    padding: 24px 1rem 3pc;
+    gap: 20px 2pc;
+  }
+}
+
+footer .footer-main-content svg {
+  width: 16px;
+  height: 16px;
+  margin-right: 4px;
+}
+
+footer .footer-main-content li {
+  margin-bottom: 1pc;
+}
+
+footer .footer-main-content a {
+  color: #fff;
+  line-height: 20px;
+  text-decoration: none;
+  transition: color .25s ease-out;
+}
+
+footer .footer-main-content a:hover {
+  text-decoration: underline;
+}
+
+footer .footer-main-content span {
+  width: 16px;
+  height: 16px;
+}
+
+footer .footer-main-content > div:first-child {
+  flex-basis: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  footer .footer-main-content > div:first-child {
+    flex-basis: 100%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  footer .footer-main-content > div:first-child {
+    flex: 2;
+  }
+}
+
+
+footer .footer-main-content > div:not(:first-child) {
+  flex: 1;  
+}
+
+footer .footer-disclaimer-wrapper {
+  background-color: #1e2d39;
+}
+
+footer .footer-disclaimer-content {
+  padding: 40px 1rem;
+  margin: 0 auto;
+  max-width: var(--wide-page-width);
 }
