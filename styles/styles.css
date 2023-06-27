@@ -10,133 +10,196 @@
  * governing permissions and limitations under the License.
  */
 
-@import url('reset.css');
+ @import url('reset.css');
 
-:root {
-  /* colors */
-  --light-gray: #f4f5f6;
-  --ghost: #f9fafa;
-  --charcoal: #3b4b59;
-  --sea-blue: #07608d;
-  --light-blue: #086ea1;
-  --silver: #d3d7da;
+ :root {
+   /* colors */
+   --light-gray: #f4f5f6;
+   --ghost: #f9fafa;
+   --charcoal: #3b4b59;
+   --sea-blue: #07608d;
+   --light-blue: #086ea1;
+   --silver: #d3d7da;
+   --turqoise: #05c3de;
+ 
+   /* fonts */
+   --body-font-family: 'Nimbus Sans Novus', 'Nimbus Sans Novus Fallback', helvetica, arial, sans-serif;
+   --heading-font-family: var(--body-font-family);
+ 
+   /** font styles/weights **/
+   --font-weight-normal: 400;
+   --font-weight-bold: 700;
+   --font-style-italic: italic;
 
-  
-  /* fonts */
-  --body-font-family: 'Nimbus Sans Novus', 'Nimbus Sans Novus Fallback', helvetica, arial, sans-serif;
-  --heading-font-family: var(--body-font-family);
-
-  /** font styles/weights **/
-  --font-weight-normal: 400;
-  --font-weight-bold: 700;
-  --font-style-italic: italic;
-
-  /* body sizes */
-  --body-font-size-xs: 12px;
-  --body-font-size-s: 14px;
-  --body-font-size-m: 16px;
-  --body-font-size-l: 18px;
-  --body-font-size-xl: 20px;
-
-  /* heading sizes */
-  --heading-font-size-l: 40px;
-  --heading-font-size-xl: 48px;
-  --heading-font-size-xxl: 56px;
-
-  /* line heights */
-  --line-height-xs: 1.15em;
-  --line-height-m: 1.5em;
-
-  /** letter spacing */
-  --letter-spacing-xs: .0012em;
-
-  /* Common dimensions */
-  --full-page-width: 100vw;
-  --wide-page-width: 1400px;
-
-  /* nav height */
-  --nav-height: 64px;
-
-}
-
+   /* font colors */
+   --default-text-color: var(--charcoal);
+ 
+   /* body sizes */
+   --body-font-size-xs: 12px;
+   --body-font-size-s: 14px;
+   --body-font-size-m: 16px;
+   --body-font-size-l: 18px;
+   --body-font-size-xl: 20px;
+   --body-font-size-xxl: 24px;
+ 
+   /* heading sizes */
+   --heading-font-size-xxs: 20px;
+   --heading-font-size-xs: 24px;
+   --heading-font-size-s: 28px;
+   --heading-font-size-m: 32px;
+   --heading-font-size-l: 40px;
+   --heading-font-size-xl: 48px;
+   --heading-font-size-xxl: 56px;
+ 
+   /* line heights */
+   --line-height-xs: 1.15em;
+   --line-height-m: 1.5em;
+ 
+   /** letter spacing */
+   --letter-spacing-xs: .0012em;
+ 
+   /* Common dimensions */
+   --full-page-width: 100vw;
+   --wide-page-width: 1400px;
+ 
+   /* nav height */
+   --nav-height: 64px;
+ 
+ }
+ 
 *, *::before, *::after {
-  box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 a, p, span {
   font-family: var(--body-font-family);
   font-weight: var(--font-weight-normal);
-  font-size: var(--body-font-size-m);
+  font-size: var(--body-font-size-l);
   text-align: left;
 }
 
-body {
-  display: none;
+p, h1, h2, h3, h4 {
+  color: var(--default-text-color);
 }
 
-body.appear {
-  display: unset;
+h4 {
+  font-size: var(--heading-font-size-m);
 }
 
-header {
-  height: var(--nav-height);
+h3 {
+  font-size: var(--heading-font-size-xs);
 }
 
-main {
-  position: relative;
+h4, h3, h2, h1 {
+  font-weight: var(--font-weight-bold);
+  font-family: var(--heading-font-family);
 }
 
-main .section {
-  max-width: var(--wide-page-width);
-  margin: 0 auto;
+strong {
+  font-weight: var(--font-weight-bold);
 }
 
-@media screen and (min-width: 600px) {
+h4::after,
+h3::after {
+  content: "";
+  border-bottom: 2px solid var(--turqoise);
+  width: 46px;
+  display: block;
+  margin-top: 16px;
+  margin-bottom: 28px;
+}
+ 
+ body {
+   display: none;
+ }
+ 
+ body.appear {
+   display: unset;
+ }
+ 
+ header {
+   height: var(--nav-height);
+ }
+ 
+ main {
+   position: relative;
+ }
+
+ .icon svg {
+    width: 100%;
+    height: 100%;
+ }
+ 
+ @media screen and (min-width: 600px) {
   :root {
     --nav-height: 110px;
   }
+
+  p {
+    font-size: var(--body-font-size-xl);
+  }
+
+  h3 {
+    font-size: var(--heading-font-size-xs);
+  }
 }
 
-@font-face {
-  font-family: 'Nimbus Sans Novus Fallback';
-  font-style: normal;
-  font-weight: 400;
-  src: local('Arial');
-  ascent-override: 94.65%;
-  descent-override: 21.29%;
-  line-gap-override: 0.00%;
-  size-adjust: 93.93%;
+@media screen and (min-width: 900px) {
+  h3 {
+    font-size: var(--heading-font-size-s);
+  }
 }
 
-@font-face {
-  font-family: 'Nimbus Sans Novus Fallback';
-  font-style: italic;
-  font-weight: 400;
-  src: local('Arial Italic');
-  ascent-override: 95.90%;
-  descent-override: 21.10%;
-  line-gap-override: 0.00%;
-  size-adjust: 92.91%;
-}
+@media screen and (min-width: 1200px) {
+  p {
+    font-size: var(--body-font-size-xxl);
+  }
 
-@font-face {
-  font-family: 'Nimbus Sans Novus Fallback';
-  font-style: normal;
-  font-weight: 700;
-  src: local('Arial Bold');
-  ascent-override: 97.66%;
-  descent-override: 22.32%;
-  line-gap-override: 0.00%;
-  size-adjust: 93.18%;
+  h3 {
+    font-size: var(--heading-font-size-m);
+  }
 }
-
-@font-face {
-  font-family: 'Nimbus Sans Novus Fallback';
-  font-style: italic;
-  font-weight: 700;
-  src: local('Arial Bold Italic');
-  ascent-override: 98.77%;
-  descent-override: 21.78%;
-  line-gap-override: 0.00%;
-  size-adjust: 92.75%;
-}
+ 
+ @font-face {
+   font-family: 'Nimbus Sans Novus Fallback';
+   font-style: normal;
+   font-weight: 400;
+   src: local('Arial');
+   ascent-override: 94.65%;
+   descent-override: 21.29%;
+   line-gap-override: 0.00%;
+   size-adjust: 93.93%;
+ }
+ 
+ @font-face {
+   font-family: 'Nimbus Sans Novus Fallback';
+   font-style: italic;
+   font-weight: 400;
+   src: local('Arial Italic');
+   ascent-override: 95.90%;
+   descent-override: 21.10%;
+   line-gap-override: 0.00%;
+   size-adjust: 92.91%;
+ }
+ 
+ @font-face {
+   font-family: 'Nimbus Sans Novus Fallback';
+   font-style: normal;
+   font-weight: 700;
+   src: local('Arial Bold');
+   ascent-override: 97.66%;
+   descent-override: 22.32%;
+   line-gap-override: 0.00%;
+   size-adjust: 93.18%;
+ }
+ 
+ @font-face {
+   font-family: 'Nimbus Sans Novus Fallback';
+   font-style: italic;
+   font-weight: 700;
+   src: local('Arial Bold Italic');
+   ascent-override: 98.77%;
+   descent-override: 21.78%;
+   line-gap-override: 0.00%;
+   size-adjust: 92.75%;
+ }
