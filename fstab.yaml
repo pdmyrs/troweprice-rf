@@ -1,2 +1,3 @@
 mountpoints:
-  /: https://adobe.sharepoint.com/:f:/r/sites/HelixProjects/Shared%20Documents/sites/troweprice/retirement-fund
+#  /: https://adobe.sharepoint.com/:f:/r/sites/HelixProjects/Shared%20Documents/sites/troweprice/retirement-fund
+/: https://drive.google.com/drive/folders/1ZN3qEox7L5wWyfPY2WOA_LFnvHR34Mvx?usp=drive_link
