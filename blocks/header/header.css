@@ -1,3 +1,7 @@
+.header-wrapper {
+  z-index: 999;
+}
+
 .header.block {
   background-color: var(--light-gray);
 }

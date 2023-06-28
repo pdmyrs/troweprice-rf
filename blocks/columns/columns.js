@@ -1,4 +1,6 @@
-export default function decorate(block) {
+import { decorateIcons } from '../../scripts/lib-franklin.js';
+
+export default async function decorate(block) {
   const cols = [...block.firstElementChild.children];
   block.classList.add(`columns-${cols.length}-cols`);
 
@@ -15,4 +17,6 @@ export default function decorate(block) {
       }
     });
   });
+
+  await decorateIcons(block);
 }
