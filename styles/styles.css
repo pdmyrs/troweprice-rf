@@ -76,7 +76,9 @@ a, p, span {
   font-weight: var(--font-weight-normal);
   font-size: var(--body-font-size-l);
   text-align: left;
-}
+  line-height: 24px;
+
+} 
 
 p, h1, h2, h3, h4 {
   color: var(--default-text-color);
@@ -137,6 +139,7 @@ h3::after {
 
   p {
     font-size: var(--body-font-size-xl);
+    line-height: 28px;
   }
 
   h3 {
@@ -153,6 +156,7 @@ h3::after {
 @media screen and (min-width: 1200px) {
   p {
     font-size: var(--body-font-size-xxl);
+    line-height: 32px;
   }
 
   h3 {

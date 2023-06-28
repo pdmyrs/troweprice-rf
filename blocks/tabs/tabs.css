@@ -1,0 +1,90 @@
+/*
+ * Copyright 2023 Adobe. All rights reserved.
+ * This file is licensed to you under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License. You may obtain a copy
+ * of the License at http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software distributed under
+ * the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR REPRESENTATIONS
+ * OF ANY KIND, either express or implied. See the License for the specific language
+ * governing permissions and limitations under the License.
+ */
+ 
+ .tabs ul {
+    display: flex;
+    flex-wrap: nowrap;
+    padding-left: 0;
+    list-style: none;
+    margin-bottom: 16px;
+}
+
+.tabs li {
+    box-sizing: border-box;
+    cursor: pointer;
+    flex: 1 1 auto;
+    justify-content: center;
+    padding: 24px 0;
+    position: relative;
+}
+
+.tabs li button {
+    padding: 1px 6px;
+    border-radius: 0;
+    cursor: pointer;
+    background: none;
+    text-align: center;
+    display: inline-block;
+    border: none;
+    height: 100%;
+    width: 100%;
+    font-family: var(--body-font-family);
+    font-size: var(--body-font-size-s);
+    font-weight: var(--font-weight-normal);
+    line-height: var(--line-height-m);
+    margin-bottom: 14px;
+    color: var(--light-blue);
+}
+
+.tabs li:hover {
+    background-color: var(--light-gray);
+    transition: background-color .25s ease-in-out;
+}
+
+.tabs li.active::before {
+    content: "";
+    position: absolute;
+    border-bottom: 2px solid var(--turqoise);
+    bottom: 0;
+    height: 2px;
+    left: 1pc;
+    right: 1pc;
+}
+
+.tabs li button.active {
+    font-weight: var(--font-weight-bold);    
+    color: var(--charcoal);
+}
+
+.tabs-container .tab-item {
+    margin-top: 24px;
+}
+
+.tabs-container .tab-item.hidden {
+    display: none;
+}
+
+
+@media screen and (min-width: 600px) {
+    .tabs li button {
+        font-size: var(--body-font-size-m);
+        margin-bottom: 16px;
+        line-height: var(--line-height-m);
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .tabs li button {
+        font-size: var(--body-font-size-l);
+        margin-bottom: 18px;
+    }
+}
