@@ -3,8 +3,8 @@
 Project code for the T. Rowe Price retirement fund site.
 
 ## Environments
-- Preview: https://main--troweprice-rf--hlxsites.hlx.page/
-- Live: https://main--troweprice-rf--hlxsites.hlx.live/
+- Preview: https://main--troweprice-rf--pdmyrs.hlx.page/
+- Live: https://main--troweprice-rf--pdmyrs.hlx.live/
 
 ## Installation
 
